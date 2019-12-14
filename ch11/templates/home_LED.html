@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>GPIO TEST</title>
+    <style>
+		body {font-size:120%;} 
+		#main {display: table; margin: auto;  padding: 0 10px 0 10px; } 
+		.button { padding:5px 5px 5px 5px; width:100%; font-size: 120%;}
+		#but1 { background-color: mistyrose; }
+		#but2 { background-color: honeydew; }
+    </style>
+</head>
+<body>
+  <div id='main'>
+   <h2>웹서버 GPIO 제어</h2>
+    {% for pin in pins %}
+   <p>The {{ pins[pin].name }}
+   {% if pins[pin].state == True %}
+      <a href="/{{pin}}/off"><button id='but1'>끄기</button></a>
+   {% else %}
+      <a href="/{{pin}}/on"><button id='but2'>켜기</button></a>
+   {% endif %}
+   </p>
+   {% endfor %}
+  </div>
+</body>
+</html>    

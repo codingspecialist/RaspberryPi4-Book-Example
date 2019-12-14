@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+   <title>GPIO TEST</title>
+</head>
+<body>
+   <h1>웹서버 GPIO 제어</h1>
+    {% for pin in pins %}
+   <p>The {{ pins[pin].name }}
+   {% if pins[pin].state == True %}
+      is currently on (<a href="/{{pin}}/off">끄기</a>)
+   {% else %}
+      is currently off (<a href="/{{pin}}/on">켜기</a>)
+   {% endif %}
+   </p>
+   {% endfor %}
+</body>
+</html>   

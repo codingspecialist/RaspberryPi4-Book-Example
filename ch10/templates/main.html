@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+   <title>MQTT TEST</title>
+</head>
+<body>
+   <h1>MQTT 메세지로 NodeMCU LED 제어</h1>
+
+   {% if led.state == "ON" %}
+      {{led.name}} is currently on (<a href="/LED/off">LED 끄기</a>)
+   {% else %}
+      {{led.name}} is currently off (<a href="/LED/on">LED 켜기</a>)
+   {% endif %}
+   <br>
+   {% if message %}
+   <h2>{{ message }}</h2>
+   {% endif %}
+</body>
+</html>
