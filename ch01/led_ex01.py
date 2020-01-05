@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import RPi.GPIO as GPIO
 import time
 
@@ -11,13 +8,13 @@ LED = 11
 GPIO.setup(LED, GPIO.OUT, initial=GPIO.LOW)
 
 try:
-		while 1:
-			GPIO.output(LED, GPIO.HIGH)
-			time.sleep(0.5)
+    while 1:
+        GPIO.output(LED, GPIO.HIGH)
+	time.sleep(0.5)
 			
-			GPIO.output(LED, GPIO.LOW)
-			time.sleep(0.5)
+	GPIO.output(LED, GPIO.LOW)
+	time.sleep(0.5)
 except KeyboardInterrupt:
-	pass
+    pass
 	
 GPIO.cleanup()
