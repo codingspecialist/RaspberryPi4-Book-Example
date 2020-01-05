@@ -3,7 +3,7 @@ import time
 
 GPIO.setmode(GPIO.BOARD)
 
-LED = 11
+LED = 8
 
 GPIO.setup(LED, GPIO.OUT, initial=GPIO.LOW)
 
