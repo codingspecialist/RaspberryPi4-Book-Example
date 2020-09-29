@@ -30,7 +30,7 @@ try:
         while GPIO.input(ECHO)==0:
             start = time.time()	 # Echo 핀 상승 시간 
         while GPIO.input(ECHO)==1:
-            stop= time.time	 # Echo 핀 하강 시간 
+            stop= time.time()	 # Echo 핀 하강 시간 
             
         check_time = stop - start
         distance = check_time * 34300 / 2
