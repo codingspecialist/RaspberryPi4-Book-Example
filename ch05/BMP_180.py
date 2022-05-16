@@ -4,7 +4,7 @@
 import Adafruit_BMP.BMP085 as BMP085
 
 # BMP180센서의 인스턴스 sensor 생성 
-sensor = BMP085.BMP085()
+sensor = BMP085.BMP085(busnum=1)
 # 온도, 압력, 고도 값을 읽어서 변수에 저장 
 temp = sensor.read_temperature()
 pressure = sensor.read_pressure()
