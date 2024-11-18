@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import os
 import boto3
 
@@ -11,7 +11,6 @@ def compare_face():
     
     imageSource=open(sourceFile,'rb')
     imageTarget=open(targetFile,'rb')
-
     try:
         response=client.compare_faces(SimilarityThreshold=70,
                                   SourceImage={'Bytes': imageSource.read()},
@@ -24,12 +23,16 @@ def compare_face():
         return result
     except:
         return 0
-
+    
 @app.route("/detect")
 def detect():
-    os.system("raspistill -t 1 -o '/home/pi/webapps/ch09/detect/source.jpg'")
+    os.system("libcamera-still -o /home/pi/webapps/ch12/detect/source.jpg")
     result = compare_face()
     return str(result)
 
+@app.route("/")
+def indeX():
+    return render_template("main.html")
+
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8888, debug=True)
+    app.run(host='0.0.0.0', port=8889, debug=True)
