@@ -1,9 +1,8 @@
-# IoT 사물인터넷을 위한 라즈베리파이 4 정석
+# IoT 사물인터넷과 OpenAI 인공지능을 위한 라즈베리파이 5 정석 (2024.11.30 리뉴얼)
+![blog](book.png)
 
-- <http://jspstudy.co.kr>
+## 질문과 답변
+https://cafe.naver.com/metacoding
+![blog](cafe.png)
 
-- <https://blog.naver.com/codingspecialist>
 
-- <https://blog.naver.com/getinthere>
-
-![blog](http://image.yes24.com/Goods/83492347/800x0)

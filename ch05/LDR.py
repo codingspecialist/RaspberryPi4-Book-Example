@@ -25,7 +25,7 @@ def readadc(adcnum):
     return -1
   r = spi.xfer2([1, 8 + adcnum << 4, 0])
   data = ((r[1] & 3) << 8) + r[2]
-    return data
+  return data
 
 while True:
  # readadc 함수로 ldr_channel의 SPI 데이터를 읽어옵니다.

@@ -7,7 +7,7 @@ import time
 #  노란색 LED, 빨간색 LED, 센서 입력핀 번호 설정 
 led_R = 20
 led_Y = 21
-sensor = 4
+sensor = 17
 
 # 불필요한 warning 제거,  GPIO핀의 번호 모드 설정
 GPIO.setwarnings(False)
@@ -32,6 +32,7 @@ try:
         if GPIO.input(sensor) == 0:      #센서가 Low(0)출력  
                 GPIO.output(led_R, 1)   # 빨간색 LED 켬 
                 GPIO.output(led_Y, 0)   # 노란색 LED 끔 
+                print("NO Motion !")
                 time.sleep(0.2)                    
 
 except KeyboardInterrupt:
